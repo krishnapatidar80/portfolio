@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Krishnakant Patidar | Portfolio</title>
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<meta name="description" content="Krishnakant Patidar - Java Full Stack Developer Portfolio showcasing Java, Spring Boot, React.js, AWS, MySQL and Full Stack Development projects.">
+
+<meta name="keywords" content="Krishnakant Patidar, Java Developer, Full Stack Developer, Spring Boot, React.js, AWS, MySQL, Portfolio">
+
+<meta name="author" content="Krishnakant Patidar">
+
+<meta name="robots" content="index, follow">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#111827;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#38bdf8;
+}
+
+/* nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+} */
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:600;
+position:relative;
+transition:.3s;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:#38bdf8;
+transition:.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+section{
+padding:100px 10%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+color:#38bdf8;
+margin-bottom:50px;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:70px;
+flex-wrap:wrap;
+}
+
+.hero img{
+width:320px;
+height:320px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid #38bdf8;
+box-shadow:0 0 30px #38bdf8;
+transition:.5s;
+}
+
+.hero img:hover{
+transform:scale(1.05);
+box-shadow:0 0 40px #38bdf8;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero-text h1{
+font-size:60px;
+}
+
+.hero-text span{
+color:#38bdf8;
+}
+
+.hero-text h3{
+margin:10px 0;
+}
+
+.hero-text p{
+line-height:1.8;
+margin:20px 0;
+color:#cbd5e1;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 24px;
+    background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s;
+    box-shadow:0 4px 15px rgba(56,189,248,.3);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(56,189,248,.5);
+}
+
+.about{
+text-align:center;
+max-width:900px;
+margin:auto;
+line-height:1.8;
+font-size:18px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+align-items:stretch;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+height:100%;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:contain;
+background:white;
+border-radius:10px;
+padding:8px;
+margin-top:15px;
+transition:.3s;
+}
+
+.card img:hover{
+transform:scale(1.03);
+}
+
+.card:hover{
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px rgba(56,189,248,.45);
+}
+
+/* .card h3{
+color:#38bdf8;
+margin-bottom:10px;
+} */
+
+.stats .card{
+text-align:center;
+}
+
+.stats .card h2{
+font-size:35px;
+color:#38bdf8;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+font-size:18px;
+}
+
+.social{
+margin-top:20px;
+}
+
+.social a{
+color:white;
+font-size:28px;
+margin:0 10px;
+}
+
+.social a:hover{
+color:#38bdf8;
+}
+
+footer{
+background:#111827;
+text-align:center;
+padding:25px;
+}
+
+.typing{
+overflow:hidden;
+white-space:nowrap;
+border-right:3px solid #38bdf8;
+width:0;
+animation:typing 4s steps(30,end) infinite;
+}
+
+@keyframes typing{
+0%{width:0}
+50%{width:100%}
+100%{width:0}
+}
+
+@media(max-width:768px){
+
+.hero-text h1{
+font-size:40px;
+}
+
+.hero img{
+width:250px;
+height:250px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+
+.contact p{
+    font-size:18px;
+    margin:18px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+}
+
+.contact p i{
+    color:#38bdf8;
+    font-size:22px;
+    width:28px;
+}
+
+.contact p a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.contact p a:hover{
+    color:#38bdf8;
+}
+
+.social{
+    margin-top:30px;
+}
+
+.social a{
+    width:50px;
+    height:50px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 8px;
+    border-radius:50%;
+    background:#1e293b;
+    color:white;
+    font-size:22px;
+    transition:.3s;
+}
+
+.social a:hover{
+    background:#38bdf8;
+    color:#fff;
+    transform:translateY(-5px);
+    box-shadow:0 0 15px rgba(56,189,248,.6);
+}
+
+#topBtn{
+position:fixed;
+bottom:25px;
+right:25px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#38bdf8;
+color:#fff;
+font-size:22px;
+cursor:pointer;
+display:none;
+box-shadow:0 0 20px rgba(56,189,248,.5);
+z-index:999;
+}
+
+#topBtn:hover{
+transform:scale(1.1);
+}
+
+
+</style>
+
+<body>
+
+<header>
+
+<div class="logo">KP</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#stats">Stats</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#certificates">Certificates</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h3>Hello, I'm</h3>
+
+<h1>Krishnakant <span>Patidar</span></h1>
+
+<h2 class="typing">Java Full Stack Developer</h2>
+
+<p>
+<!-- Student at Medi-Caps University, Indore.
+Full Stack Developer | Java | Spring Boot | Spring MVC |
+Hibernate | React.js | MySQL | REST APIs | Problem Solver. -->
+Aspiring Java Full Stack Developer with hands-on experience in building secure and scalable web applications using Java, Spring Boot, Spring MVC, Hibernate, MySQL and AWS Cloud. Passionate about solving real-world problems through clean code and modern web technologies.
+</p>
+
+<a href="krishnakant_patidar.pdf" target="_blank" class="btn">📄 Download Resume</a>
+<a href="#contact" class="btn">Contact Me</a>
+
+</div>
+
+<div>
+<img src="images/photo1.jpeg" alt="Profile">
+</div>
+
+</section>
+
+<section id="about" data-aos="fade-up">
+
+<h2 class="title">About Me</h2>
+
+<div class="about">
+
+<p>
+I am currently pursuing a Master of Computer Applications (MCA) from Medi-Caps University, Indore. 
+During my internship at Ypsilon IT Solutions Pvt.Ltd., I worked on software development projects 
+that strengthened my skills in Java, Spring Boot, React.js, Spring MVC, JDBC, Hibernate, MySQL, and web technologies.
+<br>
+I enjoy building scalable web applications, solving real-world problems, 
+and learning new technologies. I have developed academic and personal projects 
+that have enhanced my understanding of full-stack development, database management, 
+and software engineering principles.
+<br>
+I am actively seeking opportunities as a Software Engineer or Full Stack Developer 
+where I can contribute my technical skills, learn from experienced professionals, 
+and grow in a dynamic environment.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills" data-aos="fade-up">
+
+<h2 class="title">Technical Skills</h2>
+
+<div class="grid">
+
+<div class="card"><i class="fab fa-java"></i> Java</div>
+<div class="card"><i class="fas fa-leaf"></i> Spring Boot</div>
+<div class="card"><i class="fas fa-layer-group"></i> Spring MVC</div>
+<div class="card"><i class="fas fa-database"></i> MySQL</div>
+<div class="card"><i class="fas fa-plug"></i> REST API</div>
+<div class="card"><i class="fas fa-cubes"></i> Hibernate</div>
+<div class="card"><i class="fas fa-server"></i> JDBC</div>
+<div class="card"><i class="fas fa-code"></i> Servlet</div>
+<div class="card"><i class="fas fa-file-code"></i> JSP</div>
+<div class="card"><i class="fab fa-react"></i> React JS</div>
+<div class="card"><i class="fab fa-html5"></i> HTML5</div>
+<div class="card"><i class="fab fa-css3-alt"></i> CSS3</div>
+<div class="card"><i class="fab fa-js-square"></i> JavaScript</div>
+<div class="card"><i class="fab fa-git-alt"></i> Git</div>
+<div class="card"><i class="fab fa-github"></i> GitHub</div>
+<div class="card"><i class="fab fa-aws"></i> AWS</div>
+
+</div>
+
+</section>
+
+<section id="stats" class="stats" data-aos="fade-up">
+
+<h2 class="title">Statistics</h2>
+
+<div class="grid">
+
+<div class="card">
+<h2>10+</h2>
+<p>Technologies</p>
+</div>
+
+<div class="card">
+<h2>5+</h2>
+<p>Projects</p>
+</div>
+
+<div class="card">
+<h2>5+</h2>
+<p>Certificates</p>
+</div>
+
+<div class="card">
+<h2>100%</h2>
+<p>Learning Mindset</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects" data-aos="fade-up">
+
+<h2 class="title">Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>User Authentication  & Management System</h3>
+<p>Developed a secure user authentication and management
+application that allows users to register, log in,
+recover passwords, and manage profile information.</p>
+<br>
+<p>Key Features:<br>
+• User Registration and Login<br>
+• Authentication and Authorization<br>
+• Forgot Password Functionality<br>
+• CRUD Operations<br>
+• User Data Management</p>
+<br>
+<p>Technologies :
+Java, JDBC, JavaScript, MySQL</p>
+
+<a href="https://github.com/krishnapatidar80/User-Authentication-Management_System"
+target="_blank"
+class="btn">
+<i class="fab fa-github"></i> View Code
+</a>
+</div>
+
+<div class="card">
+<h3>E-Commerce Website</h3>
+<p>
+Designed and developed a responsive e-commerce
+web application that allows users to browse products,
+search items, add products to the cart, and place orders online.
+The system also provides an admin panel for managing products,
+categories, customers, and orders efficiently.</p>
+<br>
+<p>Key Features:<br>
+• User Registration and Login<br>
+• Product Listing and Search<br>
+• Order Placement and Tracking<br>
+• Product Category Management<br>
+• Customer Management<br>
+• Admin Dashboard<br>
+• Secure Database Integration</p>
+<br>
+<p>Technologies :
+JSP, Servlet, JDBC, MySQL, Core Java, Advanced Java</p>
+
+<a href="https://github.com/krishnapatidar80/Online-Pharmacy-Store"
+target="_blank"
+class="btn">
+<i class="fab fa-github"></i> View Code
+</a>
+
+</div>
+
+
+<div class="card">
+<h3>Training Institute Management System</h3>
+<p>Developed a web-based management system for
+training institutes to efficiently manage students,
+courses, trainers, and enrollment records.</p>
+<br>
+<p>Key Features:<br>
+• Student Management<br>
+• Course Management<br>
+• Trainer Management<br>
+• Enrollment Tracking<br>
+• Complete CRUD Operations</p>
+<br>
+<p>Technologies :
+Spring, Spring MVC, Hibernate, JDBC, JSP,
+JavaScript, MySQL</p>
+
+<a href="https://github.com/krishnapatidar80/TrainingInstituteManagementSystem"
+target="_blank"
+class="btn">
+<i class="fab fa-github"></i> View Code
+</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="experience" data-aos="fade-up">
+
+<h2 class="title">Experience</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<!-- <h3>Software Engineer Intern</h3>
+
+<h4>Ypsilon IT Solutions Pvt. Ltd.</h4>
+
+<p style="margin-top:10px;">
+Oct 2024 – Jan 2025 | Indore, Madhya Pradesh
+</p>
+
+<p style="margin-top:15px;">
+Contributed to the development of real-world web applications
+by designing responsive user interfaces<br> and implementing
+backend functionalities using Java technologies.
+</p>
+
+<div style="margin-top:15px;">
+
+<h4>Key Contributions</h4>
+
+<ul style="margin-top:10px; padding-left:20px; line-height:1.8;">
+<li>Developed an Online Pharmacy Store Website.</li>
+<li>Designed and built a Personal Portfolio Website.</li>
+<li>Worked with Spring Boot, Spring MVC, Hibernate and MySQL.</li>
+<li>Implemented database operations and business logic.</li>
+<li>Collaborated with the development team to deliver projects on time.</li>
+<li>Enhanced debugging, problem-solving and full-stack development skills.</li>
+</ul>
+
+</div>
+
+<p style="margin-top:15px;">
+<b>Technologies:</b> Java, Spring Boot, Spring MVC,
+Hibernate, MySQL, HTML, CSS, JavaScript
+</p> -->
+
+
+<div class="card">
+
+    <div style="display:flex;align-items:center;gap:18px;margin-bottom:20px;">
+
+        <img src="images/ypsilon.png"
+             alt="Ypsilon IT Solutions Logo"
+             style="width:75px;
+                    height:75px;
+                    background:#fff;
+                    padding:8px;
+                    border-radius:12px;
+                    object-fit:contain;
+                    box-shadow:0 4px 10px rgba(0,0,0,.25);">
+
+        <div>
+            <h3><i class="fas fa-briefcase"></i> Software Engineer Intern</h3>
+            <h4>Ypsilon IT Solutions Pvt. Ltd.</h4>
+            <p style="margin-top:6px;">
+                <i class="fas fa-calendar-alt"></i> Oct 2024 – Jan 2025 |
+                <i class="fas fa-location-dot"></i> Indore, Madhya Pradesh
+            </p>
+        </div>
+
+    </div>
+
+    <p>
+        Contributed to the development of real-world web applications
+        by designing responsive user interfaces and implementing backend
+        functionalities using Java technologies.
+    </p>
+
+    <div style="margin-top:15px;">
+
+        <h4><i class="fas fa-star"></i> Key Contributions</h4>
+
+        <ul style="margin-top:10px;padding-left:20px;line-height:1.8;">
+            <li>Developed an Online Pharmacy Store Website.</li>
+            <li>Designed and built a Personal Portfolio Website.</li>
+            <li>Worked with Spring Boot, Spring MVC, Hibernate and MySQL.</li>
+            <li>Implemented database operations and business logic.</li>
+            <li>Collaborated with the development team to deliver projects on time.</li>
+            <li>Enhanced debugging, problem-solving and full-stack development skills.</li>
+        </ul>
+
+    </div>
+
+    <p style="margin-top:15px;">
+        <b>Technologies:</b> Java, Spring Boot, Spring MVC,
+        Hibernate, MySQL, HTML, CSS, JavaScript
+    </p>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+<section id="certificates" data-aos="fade-up">
+
+<h2 class="title">Certifications</h2>
+
+
+<div class="grid">
+
+<div class="card">
+
+    <h3>AWS Academy Graduate – Cloud Foundations</h3>
+
+    <p>
+        Successfully completed the <b>AWS Academy Graduate – Cloud Foundations</b> program. Gained practical knowledge of AWS core services, cloud computing, networking, security, storage, databases, and IAM.
+    </p>
+
+    <p><b>Issued By:</b> Amazon Web Services (AWS)</p>
+
+    <p><b>Issued Date:</b> 26 June 2026</p>
+
+    <a href="images/Cloud_Foundations.png" target="_blank">
+        <img src="images/Cloud_Foundations.png" alt="AWS Cloud Foundations">
+    </a>
+
+    <a href="images/Cloud_Foundations.png" target="_blank" class="btn">
+        <i class="fas fa-eye"></i> View Certificate
+    </a>
+
+</div>
+
+<div class="card">
+
+<h3>Java Full Stack Development Certification</h3>
+
+<p>
+Successfully completed comprehensive training in
+Java Full Stack Development covering Core Java,
+Advanced Java, JDBC, Servlet, JSP, Spring Framework,
+Hibernate, MySQL, HTML, CSS and JavaScript.
+</p>
+
+<p>
+<b>Issued By:</b> Universal Informatics Institute
+</p>
+<a href="images/Java_J2EE.png" target="_blank">
+<img src="images/Java_J2EE.png" alt="AWS Cloud Foundations">
+</a>
+
+ <a href="images/Java_J2EE.png" target="_blank" class="btn">
+        <i class="fas fa-eye"></i> View Certificate
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Java Full Stack Development Internship Certificate</h3>
+
+<p>
+Successfully completed internship training and
+worked on real-world web development projects
+including full-stack application development,
+database integration and responsive web design.
+</p>
+
+<p>
+<b>Issued By:</b> Ypsilon IT Solutions Pvt. Ltd.
+</p>
+
+<a href="images/YPSILON_Certificate.png" target="_blank">
+<img src="images/YPSILON_Certificate.png" alt="AWS Cloud Foundations">
+</a>
+
+ <a href="images/YPSILON_Certificate.png" target="_blank" class="btn">
+        <i class="fas fa-eye"></i> View Certificate
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>C/C++ Programming Certification</h3>
+
+<p>
+Completed programming training focused on
+problem-solving, data structures, object-oriented
+programming concepts and application development
+using C and C++.
+</p>
+
+<p>
+<b>Issued By:</b> Universal Informatics Institute
+</p>
+<p><b>Certificate No:</b> UNI-33188</p>
+
+<a href="images/C&C++.png" target="_blank">
+<img src="images/C&C++.png" alt="AWS Cloud Foundations">
+</a>
+
+ <a href="images/C&C++.png" target="_blank" class="btn">
+        <i class="fas fa-eye"></i> View Certificate
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Analytical Thinking and Logical Reasoning</h3>
+
+<p>
+Successfully completed the <b>Analytical Thinking and Logical Reasoning</b> course from <b>Board Infinity</b>, strengthening analytical thinking, logical reasoning, problem-solving, and decision-making skills.
+</p>
+
+<p><b>Issued By:</b> Board Infinity</p>
+
+<!-- <p><b>Issued Date:</b> 22 April 2026</p> -->
+
+<p><b>Certificate No:</b> CERT-20260422-859008</p>
+
+<a href="images/Board_Infinity.png" target="_blank">
+    <img src="images/Board_Infinity.png" alt="Board Infinity Certificate">
+</a>
+
+<a href="images/Board_Infinity.png" target="_blank" class="btn">
+    <i class="fas fa-eye"></i> View Certificate
+</a>
+
+</div>
+
+<br><br>
+
+</div>  
+
+
+</div>
+
+</section>
+
+
+<section id="education" data-aos="fade-up">
+
+<h2 class="title">Education</h2>
+
+<div class="card">
+
+<h3>MCA - Master of Computer Applications</h3>
+
+<p>
+Medi-Caps University, Indore
+</p>
+
+<p>
+2025 – 2027 | CGPA: 8.88
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Bachelor of Computer Applications (BCA)</h3>
+
+<p>
+Sanskar College Of Prof. Studies (Affiliated to DAVV), indore
+</p>
+
+<p>
+2022 – 2025 | CGPA: 8.02
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Higher Secondary (Class XII)</h3>
+
+<p>
+Govt. Model H.S. School, Neemuch
+</p>
+
+<p>
+MP Board | 77.8%
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Secondary School (Class X)</h3>
+
+<p>
+Govt. H.S. School, Barlai, Neemuch
+</p>
+
+<p>
+MP Board | 93.0%
+</p>
+
+</div>
+
+</section>
+
+
+<!-- <section id="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<div class="contact">
+
+<p>Email : patidarkrishna188@gmail.com</p>
+<p>Phone : +91 8109339127</p>
+<p>Location : Indore, Madhya Pradesh, India</p>
+
+<div class="social">
+
+<a href="https://www.linkedin.com/in/krishna-patidar-3358772b9/" target="_blank">
+    <i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/krishnapatidar80" target="_blank"><i class="fab fa-github"></i></a>
+<a href="https://www.instagram.com/Krishna Patidar/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="mailto:patidarkrishna188@gmail.com" target="_blank">
+    <i class="fas fa-envelope"></i>
+</a>
+</div>
+
+</div>
+
+</section> -->
+
+
+
+<section id="contact" data-aos="fade-up">
+
+    <h2 class="title">Contact Me</h2>
+
+    <div class="contact">
+
+        <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:patidarkrishna188@gmail.com">
+                patidarkrishna188@gmail.com
+            </a>
+        </p>
+
+        <p>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+918109339127">
+                +91 8109339127
+            </a>
+        </p>
+
+        <p>
+            <i class="fas fa-location-dot"></i>
+            Indore, Madhya Pradesh, India
+        </p>
+
+        <div class="social">
+
+            <a href="https://www.linkedin.com/in/krishna-patidar-3358772b9/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/krishnapatidar80" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.instagram.com/krishnapatidar188/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="patidarkrishna188@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+<h3>Krishnakant Patidar</h3>
+
+<p>Java Full Stack Developer</p>
+
+<p>
+© 2026 All Rights Reserved.
+</p>
+
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 120
+});
+</script>
+
+
+//Add Scroll to Top Button
+
+<button id="topBtn">
+<i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 120
+});
+</script>
+
+<script>
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = function () {
+
+    if (document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+
+};
+
+topBtn.onclick = function () {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+};
+</script>
+
+</body>
+</html>
